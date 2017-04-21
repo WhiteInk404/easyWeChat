@@ -22,7 +22,7 @@ class MaterialController extends Controller
 
     public function image()
     {
-        $image =$this->material->uploadImage('/Users/Johnny/Pictures/wallpapers/avatar.jpg');
+        $image =$this->material->uploadImage(public_path().'/avatar.jpg');
 
         return $image;
     }
