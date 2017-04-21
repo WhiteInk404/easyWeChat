@@ -23,5 +23,8 @@ Route::group(['middleware' => ['web']], function (){
 
     Route::get('/menu','MenuController@menu');
 
+    Route::get('/users','UsersController@users');
+    Route::get('/user/{openId}','UsersController@user');
+
 
 });
