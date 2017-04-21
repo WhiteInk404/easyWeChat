@@ -23,5 +23,5 @@ Route::group(['middleware' => ['web']], function (){
 
     Route::get('/menu','MenuController@menu');
 
-    
+
 });
