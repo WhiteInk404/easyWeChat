@@ -26,5 +26,6 @@ Route::group(['middleware' => ['web']], function (){
     Route::get('/users','UsersController@users');
     Route::get('/user/{openId}','UsersController@user');
 
-
+    Route::get('/image','MaterialController@image');
+    Route::get('/video','MaterialController@video');
 });
