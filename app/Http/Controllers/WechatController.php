@@ -29,13 +29,9 @@ class WechatController extends Controller
                 case 'event':
                     if ($message->Event == 'subscribe')
                         return 'Welcome to WeCee!';
-                        break;
-                    elseif ($message->Event == 'view')
-                        return '这是经济学人课程列表。';
-                        break;
                     else
                         return '';
-                        break;
+                    break;
                 case 'text':
                     return '你好 '.$userApi->get($message->FromUserName)->nickname;
                     break;
