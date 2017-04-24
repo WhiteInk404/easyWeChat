@@ -24,9 +24,9 @@ class MenuController extends Controller
     {
         $buttons = [
             [
-                "type" => "view",
+                "type" => "click",
                 "name" => "预约课程",
-                "url"  => "http://a.app.qq.com/o/simple.jsp?pkgname=me.wecee.student"
+                "key"  => "http"
             ],
 
             [
