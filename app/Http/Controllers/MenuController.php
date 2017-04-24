@@ -24,15 +24,10 @@ class MenuController extends Controller
     {
         $buttons = [
             [
-                "type" => "click",
-                "name" => "今日歌曲",
-                "key"  => "V1001_TODAY_MUSIC"
+                "type" => "view",
+                "name" => "经济学人",
+                "url"  => "http://mp.weixin.qq.com/mp/homepage?__biz=MzAxMjczOTc0OA==&hid=5&sn=26351897f58765781c1bb1d1e4b7d8a5#wechat_redirect"
             ],
-//            [
-//                "type" => "click",
-//                "name" => "预约课程",
-//                "key"  => "http"
-//            ],
 
             [
                 "name"       => "菜单",
@@ -63,5 +58,6 @@ class MenuController extends Controller
 
         ];
         $this->menu->add($buttons);
+        return "";
     }
 }

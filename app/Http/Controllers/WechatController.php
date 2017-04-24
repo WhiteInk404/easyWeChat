@@ -25,7 +25,7 @@ class WechatController extends Controller
 
             switch ($message->MsgType) {
                 case 'event':
-                    return '';
+ //                   return '';
 
                     break;
                 case 'text':
