@@ -27,10 +27,10 @@ class WechatController extends Controller
 
             switch ($message->MsgType) {
                 case 'event':
-                    if ($message->Event == subscribe)
+                    if ($message->Event == 'subscribe')
                         return 'Welcome to WeCee!';
                         break;
-                    elseif ($message->Event == view)
+                    elseif ($message->Event == 'view')
                         return '这是经济学人课程列表。';
                         break;
                     else
