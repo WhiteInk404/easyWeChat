@@ -21,17 +21,21 @@ class WechatController extends Controller
 
         $wechat = app('wechat');
         $userApi = $wechat->user;
+
         $wechat->server->setMessageHandler(function($message) use ($userApi){
+
 
             switch ($message->MsgType) {
                 case 'event':
                     if ($message->Event == subscribe)
-                        return "Welcome to WeCee!";
+                        return 'Welcome to WeCee!';
+                        break;
                     elseif ($message->Event == view)
-                        return "这是经济学人课程列表。";
+                        return '这是经济学人课程列表。';
+                        break;
                     else
                         return '';
-                    break;
+                        break;
                 case 'text':
                     return '你好 '.$userApi->get($message->FromUserName)->nickname;
                     break;
