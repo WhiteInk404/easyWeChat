@@ -25,8 +25,8 @@ class MenuController extends Controller
         $buttons = [
             [
                 "type" => "view",
-                "name" => "经济学人",
-                "url"  => "http://v.youku.com/v_show/id_XMTgxNTAwOTIwNA==.html?spm=a2hzp.8253869.0.0&from=y1.7-2"
+                "name" => "搜索",
+                "url"  => "http://www.soso.com/"
             ],
 
             [
@@ -45,7 +45,7 @@ class MenuController extends Controller
                     [
                         "type" => "view",
                         "name" => "红包奖励",
-                        "url" => "https://www.wecee.me/web/share/sshare/token/ZjNlYjBhYWNjYjA0OTlmZmYxOTc3ZWYxZmRiZGE4ODhiZDdjMTkzZi4xNDkyNzYyMjA5LjMyNQ=="
+                        "url"  => "https://www.wecee.me/web/share/sshare/token/ZjNlYjBhYWNjYjA0OTlmZmYxOTc3ZWYxZmRiZGE4ODhiZDdjMTkzZi4xNDkyNzYyMjA5LjMyNQ=="
                     ],
                 ],
             ],
