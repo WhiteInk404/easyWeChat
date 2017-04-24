@@ -25,9 +25,14 @@ class MenuController extends Controller
         $buttons = [
             [
                 "type" => "click",
-                "name" => "预约课程",
-                "key"  => "http"
+                "name" => "今日歌曲",
+                "key"  => "V1001_TODAY_MUSIC"
             ],
+//            [
+//                "type" => "click",
+//                "name" => "预约课程",
+//                "key"  => "http"
+//            ],
 
             [
                 "name"       => "菜单",
