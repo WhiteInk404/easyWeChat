@@ -58,6 +58,5 @@ class MenuController extends Controller
 
         ];
         $this->menu->add($buttons);
-        return "";
     }
 }
