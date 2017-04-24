@@ -26,7 +26,7 @@ class MenuController extends Controller
             [
                 "type" => "view",
                 "name" => "经济学人",
-                "url"  => "http://mp.weixin.qq.com/mp/homepage?__biz=MzAxMjczOTc0OA==&hid=5&sn=26351897f58765781c1bb1d1e4b7d8a5#wechat_redirect"
+                "url"  => "http://v.youku.com/v_show/id_XMTgxNTAwOTIwNA==.html?spm=a2hzp.8253869.0.0&from=y1.7-2"
             ],
 
             [
