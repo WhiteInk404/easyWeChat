@@ -29,6 +29,10 @@ class WechatController extends Controller
                 case 'event':
                     if ($message->Event == 'subscribe')
                         return 'Welcome to WeCee!';
+                    elseif ($message->Event == 'VIEW')
+                        return '这是网页。';
+                    elseif ($message->Event == 'CLICK')
+                        return '这是点击。';
                     else
                         return '';
                     break;
