@@ -28,7 +28,7 @@ class WechatController extends Controller
             switch ($message->MsgType) {
                 case 'event':
                     if ($message->Event == 'subscribe')
-                        return 'Welcome to WeCee!';
+                        return 'Hi '.$userApi->get($message->FromUserName)->nickname.'. Welcome to WeCee!'.'<br />客服微信：xuechun_1991';
                     elseif ($message->Event == 'VIEW')
                         return '';
                     elseif ($message->Event == 'CLICK')
@@ -37,7 +37,7 @@ class WechatController extends Controller
                         return '';
                     break;
                 case 'text':
-                    return '你好 '.$userApi->get($message->FromUserName)->nickname.'如果您需要客服帮助，请添加微信号：xuechun_1991';
+                    return '你好，'.$userApi->get($message->FromUserName)->nickname.'。如果您需要客服帮助，请添加微信号：xuechun_1991';
                     break;
                 case 'image':
                     return '收到图片消息';
