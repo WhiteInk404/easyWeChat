@@ -37,7 +37,10 @@ class WechatController extends Controller
                         return '';
                     break;
                 case 'text':
-                    return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
+                    if ($message->Content == '7000')
+                        return "www.baidu.com";
+                    else
+                        return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
                     break;
                 case 'image':
                     return '收到图片消息';
