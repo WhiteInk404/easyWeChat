@@ -47,13 +47,18 @@ class MenuController extends Controller
                         "name" => "红包奖励",
                         "url"  => "https://www.wecee.me/web/share/sshare/token/ZjNlYjBhYWNjYjA0OTlmZmYxOTc3ZWYxZmRiZGE4ODhiZDdjMTkzZi4xNDkyNzYyMjA5LjMyNQ=="
                     ],
+                    [
+                        "type" => "view",
+                        "name" => "预约课程",
+                        "url"  => "http://a.app.qq.com/o/simple.jsp?pkgname=me.wecee.student"
+                    ],
                 ],
             ],
 
             [
                 "type" => "view",
-                "name" => "预约课程",
-                "url"  => "http://a.app.qq.com/o/simple.jsp?pkgname=me.wecee.student"
+                "name" => "测词汇量",
+                "url"  => "http://reading.baicizhan.com/vocab_test"
             ],
 
         ];

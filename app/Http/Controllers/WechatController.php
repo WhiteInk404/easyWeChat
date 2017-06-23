@@ -38,7 +38,7 @@ class WechatController extends Controller
                     break;
                 case 'text':
                     if ($message->Content == '7000')
-                        return "www.baidu.com";
+                        return "链接: https://pan.baidu.com/s/1jIl4nMu 密码: xfqf";
                     else
                         return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
                     break;
