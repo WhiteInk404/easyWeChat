@@ -33,9 +33,9 @@ class MenuController extends Controller
                 "name"       => "菜单",
                 "sub_button" => [
                     [
-                        "type" => "view",
-                        "name" => "历史文章",
-                        "url"  => "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzAxMjczOTc0OA==&scene=124#wechat_redirect"
+                        "type" => "click",
+                        "name" => "生成海报",
+                        "key"  => "GeneratePoster"
                     ],
                     [
                         "type" => "view",
