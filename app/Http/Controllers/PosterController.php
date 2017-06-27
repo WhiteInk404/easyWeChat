@@ -32,10 +32,14 @@ class PosterController extends Controller
 
     public function getqrcode($openId)
     {
-        $result = $this->wechat->qrcode->forever(56);
+        $qrcodeinfo = $this->wechat->qrcode->forever(56);
+        $qrcodeurl = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=".urlencode($qrcodeinfo["ticket"]);
         $ticket = $result->ticket; // 或者 $result['ticket']
         $url = $result->url;
 
+        var_dump($qrcodeinfo);
+        var_dump($qrcodeurl);
+        var_dump($ticket);
         var_dump($url);
     }
 }
