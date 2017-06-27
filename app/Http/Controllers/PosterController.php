@@ -27,6 +27,6 @@ class PosterController extends Controller
 
         $headimgurl = substr($userinfo['headimgurl'],0,strripos($userinfo['headimgurl'], "/"))."/64";
 //        var_dump($headimgurl);
-        return $userinfo;
+        return $headimgurl;
     }
 }
