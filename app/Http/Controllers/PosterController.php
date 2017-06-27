@@ -41,6 +41,7 @@ class PosterController extends Controller
             $height = ($width / $width_orig)*$height_orig;
         }
 
+        header('Content-Type: image/jpeg');
         //将原图缩放到这个新创建的图片资源中
         $image_p = imagecreatetruecolor($width, $height);
         //获取原图的图像资源
