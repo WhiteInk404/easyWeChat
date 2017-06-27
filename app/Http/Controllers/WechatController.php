@@ -31,8 +31,8 @@ class WechatController extends Controller
                         return "Hi ".$userApi->get($message->FromUserName)->nickname."\nWelcome to WeCee!\n客服微信：xuechun_1991";
                     elseif ($message->Event == 'VIEW')
                         return '';
-                    elseif ($message->Event == 'CLICK')
-                        return '这是点击。';
+                    elseif ($message->Event == 'CLICK' && $message->EventKey == 'GeneratePoster')
+                        return 'poster';
                     else
                         return '';
                     break;
