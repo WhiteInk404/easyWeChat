@@ -23,8 +23,10 @@ class PosterController extends Controller
     public function person($openId)
     {
         $userinfo = $this->wechat->user->get($openId);
-        var_dump($userinfo);
+//        var_dump($userinfo);
+
         $headimgurl = substr($userinfo['headimgurl'],0,strripos($userinfo['headimgurl'], "/"))."/64";
-        var_dump($headimgurl);
+//        var_dump($headimgurl);
+        return $userinfo;
     }
 }
