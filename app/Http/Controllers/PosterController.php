@@ -40,7 +40,9 @@ class PosterController extends Controller
 //        var_dump($qrcodeurl);
 //        var_dump($ticket);
 //        var_dump($url);
-        $qrcode_source = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHq8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyckRWaFY5QTJhaVAxMDAwMGcwM00AAgQC_1FZAwQAAAAA";
+
+        $qrcode_source = imagecreatefromjpeg($qrcodeurl);
+        $qrcode_thumb = imagecreatetruecolor(300, 300);
         imagecopyresampled($qrcode_thumb, $qrcode_source, 0, 0, 0, 0, 300, 300, 430, 430);
 
         return $qrcode_thumb;
