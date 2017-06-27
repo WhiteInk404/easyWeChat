@@ -83,11 +83,20 @@ class PosterController extends Controller
         /**
          * add headimage to qrcode
          */
+
         $head_source = imagecreatefromjpeg($this->person($openId));
         imagecopy($qrcode_thumb, $head_source, 118, 118, 0, 0, 64, 64);
 
-        imagejpeg($qrcode_thumb);
+//        imagejpeg($qrcode_thumb);
 
+        /**
+         * add qrcode to poster
+         */
+        $dst_qr = imagecreatefromjpeg(public_path().'/poster.jpeg');
+        imagecopy($dst_qr, $qrcode_thumb, 212, 410, 0, 0, 300, 300);
+        imagejpeg($dst_qr);
     }
+
+
 
 }
