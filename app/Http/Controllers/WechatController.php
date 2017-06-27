@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+
 use Log;
 
 class WechatController extends Controller
@@ -37,14 +38,13 @@ class WechatController extends Controller
                         return '';
                     break;
                 case 'text':
-                    TextMeassage($message->Content);
-//                    if ($message->Content == '7000')
-//                        return "链接: https://pan.baidu.com/s/1jIl4nMu 密码: xfqf";
-//                    else if ($message->Content == '海报')
-//                        return "海报";
-//                    else
-//                        return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
-//                    break;
+                    if ($message->Content == '7000')
+                        return "链接: https://pan.baidu.com/s/1jIl4nMu 密码: xfqf";
+                    else if ($message->Content == '海报')
+                        return "海报";
+                    else
+                        return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
+                    break;
                 case 'image':
                     return '收到图片消息';
                     break;
@@ -74,13 +74,13 @@ class WechatController extends Controller
         return $wechat->server->serve();
     }
 
-    public function TextMeassage($content)
-    {
-        if ($content == '7000')
-            return "链接: https://pan.baidu.com/s/1jIl4nMu 密码: xfqf";
-        else if ($content == '海报')
-            return "海报";
-        else
-            return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
-    }
+//    public function TextMessage($content)
+//    {
+//        if ($content == '7000')
+//            return "链接: https://pan.baidu.com/s/1jIl4nMu 密码: xfqf";
+//        else if ($content == '海报')
+//            return "海报";
+//        else
+//            return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
+//    }
 }
