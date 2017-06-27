@@ -20,4 +20,11 @@ class PosterController extends Controller
         $this->wechat = $wechat;
     }
 
+    public function person($openId)
+    {
+        $userinfo = $this->wechat->user->get($openId);
+        var_dump($userinfo);
+        $headimgurl = substr($userinfo['headimgurl'],0,strripos($userinfo['headimgurl'], "/"))."/64";
+        var_dump($headimgurl);
+    }
 }
