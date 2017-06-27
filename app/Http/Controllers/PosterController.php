@@ -50,7 +50,7 @@ class PosterController extends Controller
         imagecopyresampled($image_p,$image,0,0,0,0,$width,$height,$width_orig,$height_orig);
 
         //将缩放后的图片$image_p保存，100(质量最佳，文件最大)
-        imagejpeg($filename);
+        imagejpeg($image_p);
 
         imagedestroy($image_p);
         imagedestroy($image);
