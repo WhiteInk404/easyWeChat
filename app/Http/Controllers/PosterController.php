@@ -37,9 +37,11 @@ class PosterController extends Controller
         $ticket = $qrcodeinfo->ticket; // 或者 $result['ticket']
         $url = $qrcodeinfo->url;
 
-        var_dump($qrcodeinfo);
         var_dump($qrcodeurl);
         var_dump($ticket);
         var_dump($url);
+
+        return $qrcodeinfo;
+
     }
 }
