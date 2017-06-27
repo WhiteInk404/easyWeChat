@@ -55,7 +55,7 @@ class PosterController extends Controller
 
         imagedestroy($image_p);
         imagedestroy($image);*/
-        return $image_p;
+//        return $image_p;
     }
     
     public function getqrcode($openId)
