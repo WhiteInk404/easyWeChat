@@ -29,4 +29,13 @@ class PosterController extends Controller
 //        var_dump($headimgurl);
         return $headimgurl;
     }
+
+    public function getqrcode($openId)
+    {
+        $result = $this->wechat->qrcode->forever(56);
+        $ticket = $result->ticket; // 或者 $result['ticket']
+        $url = $result->url;
+
+        var_dump($url);
+    }
 }
