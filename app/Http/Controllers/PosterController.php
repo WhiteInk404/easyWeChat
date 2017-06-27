@@ -34,14 +34,17 @@ class PosterController extends Controller
     {
         $qrcodeinfo = $this->wechat->qrcode->forever(56);
         $qrcodeurl = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=".urlencode($qrcodeinfo["ticket"]);
-        $ticket = $qrcodeinfo->ticket; // 或者 $result['ticket']
-        $url = $qrcodeinfo->url;
+//        $ticket = $qrcodeinfo->ticket; // 或者 $result['ticket']
+//        $url = $qrcodeinfo->url;
+//
+//        var_dump($qrcodeurl);
+//        var_dump($ticket);
+//        var_dump($url);
+        $qrcode_source = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHq8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyckRWaFY5QTJhaVAxMDAwMGcwM00AAgQC_1FZAwQAAAAA";
+        imagecopyresampled($qrcode_thumb, $qrcode_source, 0, 0, 0, 0, 300, 300, 430, 430);
 
-        var_dump($qrcodeurl);
-        var_dump($ticket);
-        var_dump($url);
-
-        return $qrcodeinfo;
+        return $qrcode_thumb;
 
     }
+
 }
