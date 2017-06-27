@@ -42,10 +42,10 @@ class PosterController extends Controller
 //        var_dump($url);
         header ('Content-Type: image/png');
         $qrcode_source = imagecreatefromjpeg($qrcodeurl);
-//        $qrcode_thumb = imagecreatetruecolor(300, 300);
-//        imagecopyresampled($qrcode_thumb, $qrcode_source, 0, 0, 0, 0, 300, 300, 430, 430);
+        $qrcode_thumb = imagecreatetruecolor(300, 300);
+        imagecopyresampled($qrcode_thumb, $qrcode_source, 0, 0, 0, 0, 300, 300, 430, 430);
 
-        imagejpeg($qrcode_source);
+        imagejpeg($qrcode_thumb);
 //        var_dump($qrcode_source);
 //        return $qrcode_source;
 
