@@ -90,7 +90,7 @@ class PosterController extends Controller
 //        imagejpeg($qrcode_thumb);
 
         /**
-         * add qrcode to poster
+         * 将两张图片合成为一张新的图片
          */
         $dst_qr = imagecreatefromjpeg(public_path().'/poster.jpeg');
         imagecopy($dst_qr, $qrcode_thumb, 212, 410, 0, 0, 300, 300);
@@ -102,8 +102,11 @@ class PosterController extends Controller
         //将图片存入变量
         $imageCode = ob_get_contents();
         ob_end_clean();
-        $material_info = $this->wechat->material_temporary->uploadImage($imageCode);
-        return $material_info['media_Id'];
+        var_dump($imageCode);
+//        //上传图片
+//        $material_info = $this->wechat->material_temporary->uploadImage($imageCode);
+//        //返还图片的media_Id
+//        return $material_info['media_Id'];
 
     }
 
