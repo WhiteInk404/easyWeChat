@@ -94,7 +94,12 @@ class PosterController extends Controller
          */
         $dst_qr = imagecreatefromjpeg(public_path().'/poster.jpeg');
         imagecopy($dst_qr, $qrcode_thumb, 212, 410, 0, 0, 300, 300);
-        imagejpeg($dst_qr);
+//        imagejpeg($dst_qr);
+        /**
+         * upload poster as temporary material
+         */
+        $material_info = $this->wechat->material_temporary->uploadImage($dst_qr);
+        return $material_info['media_Id'];
     }
 
 
