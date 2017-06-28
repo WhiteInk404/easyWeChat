@@ -94,18 +94,27 @@ class PosterController extends Controller
          */
         $dst_qr = imagecreatefromjpeg(public_path().'/poster.jpeg');
         imagecopy($dst_qr, $qrcode_thumb, 212, 410, 0, 0, 300, 300);
+
+        //开启缓存
+        ob_start();
+        //生成图片
         imagejpeg($dst_qr);
-
-    }
-
-    public function uploadposter($openId)
-    {
-        /**
-         * upload poster as temporary material
-         */
-        $material_info = $this->wechat->material_temporary->uploadImage('http://lifecoding.cn/getqrcode/'.$openId);
+        //将图片存入变量
+        $imageCode = ob_get_contents();
+        ob_end_clean();
+        $material_info = $this->wechat->material_temporary->uploadImage($imageCode);
         return $material_info['media_Id'];
+
     }
+
+//    public function uploadposter($openId)
+//    {
+//        /**
+//         * upload poster as temporary material
+//         */
+//        $material_info = $this->wechat->material_temporary->uploadImage('http://lifecoding.cn/getqrcode/'.$openId);
+//        return $material_info['media_Id'];
+//    }
 
 
 }
