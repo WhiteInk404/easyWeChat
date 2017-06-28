@@ -98,12 +98,12 @@ class PosterController extends Controller
 
     }
 
-    public function uploadposter(openId)
+    public function uploadposter($openId)
     {
         /**
          * upload poster as temporary material
          */
-        $material_info = $this->wechat->material_temporary->uploadImage('http://lifecoding.cn/getqrcode/{openId}');
+        $material_info = $this->wechat->material_temporary->uploadImage('http://lifecoding.cn/getqrcode/'.$openId);
         return $material_info['media_Id'];
     }
 
