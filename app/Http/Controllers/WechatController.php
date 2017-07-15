@@ -79,7 +79,7 @@ class WechatController extends Controller
 
         Log::info('return response.');
 
-        return $wechat->server->serve()->send();
+        return $wechat->server->serve();
     }
 
 
