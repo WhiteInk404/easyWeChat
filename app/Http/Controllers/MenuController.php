@@ -24,19 +24,14 @@ class MenuController extends Controller
     {
         $buttons = [
             [
-                "type" => "view",
-                "name" => "经济学人",
-                "url"  => "http://mp.weixin.qq.com/mp/homepage?__biz=MzAxMjczOTc0OA==&hid=5&sn=26351897f58765781c1bb1d1e4b7d8a5#wechat_redirect"
+                "type" => "click",
+                "name" => "英文晨读团",
+                "key"  => "ywcdt"
             ],
 
             [
-                "name"       => "菜单",
+                "name"       => "使用APP",
                 "sub_button" => [
-                    [
-                        "type" => "click",
-                        "name" => "生成海报",
-                        "key"  => "GeneratePoster"
-                    ],
                     [
                         "type" => "view",
                         "name" => "视频教程",

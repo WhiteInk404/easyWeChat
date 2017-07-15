@@ -32,8 +32,14 @@ class WechatController extends Controller
                         return "Hi ".$userApi->get($message->FromUserName)->nickname."\nWelcome to WeCee!\n客服微信：xuechun_1991";
                     elseif ($message->Event == 'VIEW')
                         return '';
-                    elseif ($message->Event == 'CLICK' && $message->EventKey == 'GeneratePoster')
-                        return 'poster';
+                    elseif ($message->Event == 'CLICK' && $message->EventKey == 'ywcdt')
+                        return new News([
+                            'title'       => '英文晨读 | 慢慢来，比较快',
+                            'description' => '无论你在清晨宁静的校园,还是在人潮涌动的地铁,希望我们能一起,英语学新闻,睁眼看世界!',
+                            'url'         => 'https://mp.weixin.qq.com/s?__biz=MzAxMjczOTc0OA==&mid=2650293136&idx=1&sn=c0301caf4063543ec63d2a1314a70c35&chksm=83a1d65bb4d65f4dcab582c9aa8bce25465952cd997de01a68e236ca1ba00ca29c6e33e2c488#rd',
+                            'image'       => 'https://mmbiz.qlogo.cn/mmbiz_png/ceiacP5ibxGyibJdiaynFtAfmyRun0Md6C9b0l6nticmucl9WbrkJDaEibgX31hEg8rmVXJAj4mMUVKjXjXV6P7mIErA/0?wx_fmt=png',
+                            // ...
+                        ]);
                     else
                         return '';
                     break;
