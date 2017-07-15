@@ -79,16 +79,8 @@ class WechatController extends Controller
 
         Log::info('return response.');
 
-        return $wechat->server->serve();
+        return $wechat->server->serve()->send();
     }
 
-//    public function TextMessage($content)
-//    {
-//        if ($content == '7000')
-//            return "链接: https://pan.baidu.com/s/1jIl4nMu 密码: xfqf";
-//        else if ($content == '海报')
-//            return "海报";
-//        else
-//            return "你好，".$userApi->get($message->FromUserName)->nickname."。\n如果您需要客服帮助，请添加微信号：xuechun_1991";
-//    }
+
 }
