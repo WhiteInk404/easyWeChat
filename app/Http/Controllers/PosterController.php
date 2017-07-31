@@ -116,8 +116,8 @@ class PosterController extends Controller
         /**
          * upload poster as temporary material
          */
-        $qrcodeinfo = $this->wechat->qrcode->forever(56);
-        $qrcodeurl = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=".urlencode($qrcodeinfo["ywcdt"]);
+        $qrcodeinfo = $this->wechat->qrcode->forever('ywcdt');
+        $qrcodeurl = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=".urlencode($qrcodeinfo["ticket"]);
         var_dump($qrcodeurl);
     }
 
