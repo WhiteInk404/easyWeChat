@@ -28,6 +28,7 @@ Route::group(['middleware' => ['web']], function (){
 
     Route::get('/image','MaterialController@image');
     Route::get('/video','MaterialController@video');
+    Route::get('/news','MaterialController@news');
 
     Route::get('/person/{openId}','PosterController@person');
     Route::get('/uploadposter/{openId}','PosterController@uploadposter');

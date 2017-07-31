@@ -26,4 +26,11 @@ class MaterialController extends Controller
 
         return $image;
     }
+
+    public function news()
+    {
+        $news = $material->lists($news, 10, 20);
+
+        return $news;
+    }
 }
