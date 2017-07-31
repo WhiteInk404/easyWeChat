@@ -33,4 +33,5 @@ Route::group(['middleware' => ['web']], function (){
     Route::get('/person/{openId}','PosterController@person');
     Route::get('/uploadposter/{openId}','PosterController@uploadposter');
     Route::get('/getqrcode/{openId}','PosterController@getqrcode');
+    Route::get('/generateqrcode','PosterController@generateqrcode');
 });

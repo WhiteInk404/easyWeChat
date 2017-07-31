@@ -57,7 +57,8 @@ class PosterController extends Controller
         imagedestroy($image);*/
         return $image_p;
     }
-    
+
+
     public function getqrcode($openId)
     {
         $qrcodeinfo = $this->wechat->qrcode->forever(56);
@@ -110,14 +111,15 @@ class PosterController extends Controller
 
     }
 
-//    public function uploadposter($openId)
-//    {
-//        /**
-//         * upload poster as temporary material
-//         */
-//        $material_info = $this->wechat->material_temporary->uploadImage('http://lifecoding.cn/getqrcode/'.$openId);
-//        return $material_info['media_Id'];
-//    }
+    public function generateqrcode()
+    {
+        /**
+         * upload poster as temporary material
+         */
+        $qrcodeinfo = $this->wechat->qrcode->forever(56);
+        $qrcodeurl = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=".urlencode($qrcodeinfo["ywcdt"]);
+        var_dump($qrcodeurl);
+    }
 
 
 }
