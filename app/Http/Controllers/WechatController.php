@@ -39,8 +39,8 @@ class WechatController extends Controller
                         ]);
                     elseif ($message->Event == 'VIEW')
                         return '';
-                    elseif ($message->Event == 'subscribe')
-                        return "Hi ".$userApi->get($message->FromUserName)->nickname."\nWelcome to WeCee!\n客服微信：xuechun_1991";
+//                    elseif ($message->Event == 'subscribe')
+//                        return "Hi ".$userApi->get($message->FromUserName)->nickname."\nWelcome to WeCee!\n客服微信：xuechun_1991";
                     elseif ($message->Event == 'CLICK' && $message->EventKey == 'ywcdt')
                         return new News([
                             'title'       => '英文晨读 | 慢慢来，比较快',
