@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use EasyWeChat\Message\Material;
 
 use Log;
 
@@ -34,13 +35,7 @@ class WechatController extends Controller
                         return '';
                     elseif ($message->Event == 'CLICK' && $message->EventKey == 'ywcdt')
 
-                        $mediaId = wnbcD3E9njenEUjhH9A05wplfnnECwQQhOSmnn79hXs;
-
-                        $material = new Material('mpnews', $mediaId);
-
-                        return $material;
-
-                        ]);
+                        return new Material('mpnews', 'wnbcD3E9njenEUjhH9A05wplfnnECwQQhOSmnn79hXs');
 
                     else
                         return '';
