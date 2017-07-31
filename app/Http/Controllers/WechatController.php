@@ -33,7 +33,7 @@ class WechatController extends Controller
                         return "Hi ".$userApi->get($message->FromUserName)->nickname."\nWelcome to WeCee!\n客服微信：xuechun_1991";
                     elseif ($message->Event == 'VIEW')
                         return '';
-                    elseif ($message->EventKey == 'ywcdt')
+                    elseif (($message->Event == 'subscribe' && $message->EventKey == 'ywcdt')||($message->Event == 'SCAN' && $message->EventKey == 'ywcdt'))
                         return new News([
                             'title'       => '英文晨读 | 慢慢来，比较快',
                             'description' => '我们看到太阳发出的光需要8分钟，\n看到海王星反射出的光需要4个小时，\n看到银河系边缘的光至少需要2.4万年，\n看到宇宙中距离我们最远的那颗星星发出的光需要139亿年。\n所有的光芒，都需要时间才能被看到……\n\n慢慢来，比较快。\n我们一起加油！',
