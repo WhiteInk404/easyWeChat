@@ -39,7 +39,7 @@ class WechatController extends Controller
                                 // ...
                             ]);
                         else
-                            return "同学你好，我是Johnny。\n欢迎优秀的你来到这里，和我们一起学英语，睁眼看世界\n――――――――\n如果您需要客服帮助，请添加我的个人微信号：johnnypeibai1";
+                            return "同学你好，我是Johnny。\n\n欢迎优秀的你来到这里，和我们一起学英语，睁眼看世界\n\n――――――――\n\n如果您需要客服帮助，请添加我的个人微信号：johnnypeibai1";
                     }
                     elseif ($message->Event == 'SCAN' && $message->EventKey == 'ywcdt')
                         return new News([
@@ -72,7 +72,7 @@ class WechatController extends Controller
                             // ...
                         ]);
                     else
-                        return "你好～".$userApi->get($message->FromUserName)->nickname."\n我是Johnny，很高兴遇见你～\n加我的个人微信号（johnnypeibai1），随时撩我～";
+                        return "你好～".$userApi->get($message->FromUserName)->nickname."\n\n我是Johnny，很高兴遇见你～\n\n加我微信（johnnypeibai1）\n\n随时撩我～";
                     break;
                 case 'image':
                     return '收到图片消息';
