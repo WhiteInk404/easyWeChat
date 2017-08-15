@@ -34,8 +34,8 @@ class WechatController extends Controller
                             return new News([
                                 'title'       => '英文晨读 | 慢慢来，比较快',
                                 'description' => '我们看到太阳发出的光需要8分钟，看到海王星反射出的光需要4个小时，看到银河系边缘的光至少需要2.4万年，看到宇宙中距离我们最远的那颗星星发出的光需要139亿年。所有的光芒，都需要时间才能被看到……慢慢来，比较快。我们一起加油！',
-                                'url'         => 'http://mp.weixin.qq.com/s/76YQY7NMs45UV_Xdn51yPA',
-                                'image'       => 'http://mmbiz.qpic.cn/mmbiz_png/ceiacP5ibxGyibJdiaynFtAfmyRun0Md6C9b0l6nticmucl9WbrkJDaEibgX31hEg8rmVXJAj4mMUVKjXjXV6P7mIErA/0?wx_fmt=png'
+                                'url'         => 'http://mp.weixin.qq.com/s?__biz=MzAxMjczOTc0OA==&mid=502809503&idx=3&sn=6d6dab604f68336c9eae7ef6b7fa24d5&chksm=03a1d65434d65f4212e5e35cd08301f028a70a1ed4ad877ab8b9503c3cfb25970842fa7b240d#rd',
+                                'image'       => 'http://mmbiz.qpic.cn/mmbiz_jpg/ceiacP5ibxGy8674ccv8BAje3ic2z4uuMxyOhRqIWhVicBPfoOabYx8KpHlcUJrEzSHibibv4SYAClKaw3XXehRBS6cA/0?wx_fmt=jpeg'
                                 // ...
                             ]);
                         else
@@ -45,16 +45,16 @@ class WechatController extends Controller
                         return new News([
                                 'title'       => '英文晨读 | 慢慢来，比较快',
                                 'description' => '我们看到太阳发出的光需要8分钟，看到海王星反射出的光需要4个小时，看到银河系边缘的光至少需要2.4万年，看到宇宙中距离我们最远的那颗星星发出的光需要139亿年。所有的光芒，都需要时间才能被看到……慢慢来，比较快。我们一起加油！',
-                                'url'         => 'http://mp.weixin.qq.com/s/76YQY7NMs45UV_Xdn51yPA',
-                                'image'       => 'http://mmbiz.qpic.cn/mmbiz_png/ceiacP5ibxGyibJdiaynFtAfmyRun0Md6C9b0l6nticmucl9WbrkJDaEibgX31hEg8rmVXJAj4mMUVKjXjXV6P7mIErA/0?wx_fmt=png'
-                            // ...
+                                'url'         => 'http://mp.weixin.qq.com/s?__biz=MzAxMjczOTc0OA==&mid=502809503&idx=3&sn=6d6dab604f68336c9eae7ef6b7fa24d5&chksm=03a1d65434d65f4212e5e35cd08301f028a70a1ed4ad877ab8b9503c3cfb25970842fa7b240d#rd',
+                                'image'       => 'http://mmbiz.qpic.cn/mmbiz_jpg/ceiacP5ibxGy8674ccv8BAje3ic2z4uuMxyOhRqIWhVicBPfoOabYx8KpHlcUJrEzSHibibv4SYAClKaw3XXehRBS6cA/0?wx_fmt=jpeg'
+                                // ...
                             ]);
                     elseif ($message->Event == 'CLICK' && $message->EventKey == 'ywcdt')
                         return new News([
                             'title'       => '英文晨读 | 慢慢来，比较快',
                             'description' => '我们看到太阳发出的光需要8分钟，看到海王星反射出的光需要4个小时，看到银河系边缘的光至少需要2.4万年，看到宇宙中距离我们最远的那颗星星发出的光需要139亿年。所有的光芒，都需要时间才能被看到……慢慢来，比较快。我们一起加油！',
-                            'url'         => 'http://mp.weixin.qq.com/s/76YQY7NMs45UV_Xdn51yPA',
-                            'image'       => 'http://mmbiz.qpic.cn/mmbiz_png/ceiacP5ibxGyibJdiaynFtAfmyRun0Md6C9b0l6nticmucl9WbrkJDaEibgX31hEg8rmVXJAj4mMUVKjXjXV6P7mIErA/0?wx_fmt=png'
+                            'url'         => 'http://mp.weixin.qq.com/s?__biz=MzAxMjczOTc0OA==&mid=502809503&idx=3&sn=6d6dab604f68336c9eae7ef6b7fa24d5&chksm=03a1d65434d65f4212e5e35cd08301f028a70a1ed4ad877ab8b9503c3cfb25970842fa7b240d#rd',
+                            'image'       => 'http://mmbiz.qpic.cn/mmbiz_jpg/ceiacP5ibxGy8674ccv8BAje3ic2z4uuMxyOhRqIWhVicBPfoOabYx8KpHlcUJrEzSHibibv4SYAClKaw3XXehRBS6cA/0?wx_fmt=jpeg'
                             // ...
                         ]);
                     else
@@ -67,8 +67,8 @@ class WechatController extends Controller
                         return new News([
                             'title'       => '英文晨读 | 慢慢来，比较快',
                             'description' => '我们看到太阳发出的光需要8分钟，\n看到海王星反射出的光需要4个小时，\n看到银河系边缘的光至少需要2.4万年，\n看到宇宙中距离我们最远的那颗星星发出的光需要139亿年。\n所有的光芒，都需要时间才能被看到……\n\n慢慢来，比较快。\n我们一起加油！',
-                            'url'         => 'http://mp.weixin.qq.com/s?__biz=MzAxMjczOTc0OA==&mid=502809481&idx=1&sn=77b9452a1c9ec6aea42873d92e87c013&chksm=03a1d64234d65f54504126db81f3b7c9859a971ba5c8f17aaf5e7cf95c48a774884f8801f53d#rd',
-                            'image'       => 'http://mmbiz.qpic.cn/mmbiz_png/ceiacP5ibxGyibJdiaynFtAfmyRun0Md6C9b0l6nticmucl9WbrkJDaEibgX31hEg8rmVXJAj4mMUVKjXjXV6P7mIErA/0?wx_fmt=png'
+                            'url'         => 'http://mp.weixin.qq.com/s?__biz=MzAxMjczOTc0OA==&mid=502809503&idx=3&sn=6d6dab604f68336c9eae7ef6b7fa24d5&chksm=03a1d65434d65f4212e5e35cd08301f028a70a1ed4ad877ab8b9503c3cfb25970842fa7b240d#rd',
+                            'image'       => 'http://mmbiz.qpic.cn/mmbiz_jpg/ceiacP5ibxGy8674ccv8BAje3ic2z4uuMxyOhRqIWhVicBPfoOabYx8KpHlcUJrEzSHibibv4SYAClKaw3XXehRBS6cA/0?wx_fmt=jpeg'
                             // ...
                         ]);
                     else
